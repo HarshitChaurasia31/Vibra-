@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Baloo+Bhai+2:wght@400..800&family=Bitcount+Grid+Double:wght@100..900&family=Mozilla+Headline:wght@200..700&family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Alan Sans", sans-serif;
+    color: white;
+}
+img{
+    filter: invert(1);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+nav{
+    background-color: #2B1B17;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+    padding: 5px 19px 5px 10px;
+}
+.home img{
+    width: 35px;
+    height: 35px;
+}
+.search{
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+.search input::placeholder{
+    padding: 0 0 0 5px;
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+.search input{
+    padding: 10px 10px 10px 45px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    width: 350px;
+}
+.search input:hover{
+    background-color: aliceblue;
+    border: 2px solid white;
+}
+.search img{
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    transform: translateX(-375px);
+}
+.browse button{
+    border: none;
+    transform: translateX(-60px);
+    background-color: transparent;
+}
+.browse img{
+    width: 25px;
+    height: 25px;
+}
+.partition{
+    font-size: 38px;
+}
+.right1 {
+    font-size: 18px;
+    padding: 0 0 0 350px;
+}
+.navi{
+    display: flex;
+    justify-content: flex-end;
+}
+.right2{
+    font-size: 15px;
+}
+.login button{
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    font-size: 17px;
+    width: 80px;
+    height: 47px;
+    color: black;
+}
+.install img{
+    width: 20px;
+    height: 20px;
+}
+.install{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.signup{
+    width: 60px;
+}
