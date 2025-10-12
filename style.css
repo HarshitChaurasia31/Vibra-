@@ -134,14 +134,16 @@ nav {
 .login button {
     border: none;
     padding: 10px;
-    border-radius: 12px;
+    border-radius: 20px;
     background-color: rgb(255, 255, 255);
     font-size: 17px;
     width: 80px;
     height: 47px;
     color: black;
 }
-
+.login button:hover{
+    cursor: pointer;
+}
 .install img {
     width: 20px;
     height: 20px;
@@ -189,8 +191,9 @@ main {
     backdrop-filter: blur(3px);
     background-image: linear-gradient(120deg, rgba(204, 0, 255, 0.304), rgba(3, 1, 4, 0.233));
     /* overflow-y: scroll; */
-    overflow: hidden; /* prevent grid from expanding */
-  position: relative;
+    overflow: hidden;
+    /* prevent grid from expanding */
+    position: relative;
 }
 
 .head {
@@ -292,21 +295,24 @@ main {
     justify-content: space-between;
     padding: 1rem 1rem 1rem 3rem;
 }
+
 .trend {
-  width: 100%;
-  overflow-x: auto; /* Allow this section to scroll */
+    width: 100%;
+    overflow-x: auto;
+    /* Allow this section to scroll */
+    position: relative;
 }
 
 .tsongs {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  gap: 15px;
-  padding: 15px 45px;
-  box-sizing: border-box;
-  scrollbar-width: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 15px 45px;
+    box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 
@@ -318,16 +324,20 @@ main {
     width: 175px;
     background-color: #896f557b;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
-.s1:hover{
-    background: linear-gradient(to top,rgb(0, 0, 0) 30%,rgb(218, 165, 32) 70%);
+
+.s1:hover {
+    background: linear-gradient(to top, rgb(0, 0, 0) 30%, rgb(218, 165, 32) 70%);
 }
+
 .s1 img {
     height: 170px;
     width: 100%;
     object-fit: contain;
     border-radius: 10px;
 }
+
 .s1head {
     display: -webkit-box;
     /* Use flex-like box */
@@ -343,6 +353,7 @@ main {
     padding-left: 3px;
     font-weight: 500;
 }
+
 /* .tsongs .s1 {
   flex: 0 0 auto;           
   width: 180px;             
@@ -353,42 +364,117 @@ main {
   border-radius: 10px;
   display: block;
 } */
-.s2:hover{
-    background: linear-gradient(to top,rgb(0, 0, 0) 30%,rgb(98, 98, 98) 70%);
+.s2:hover {
+    background: linear-gradient(to top, rgb(0, 0, 0) 30%, rgb(98, 98, 98) 70%);
 }
-.s3:hover{
-    background: linear-gradient(to top,rgb(202, 74, 253) 30%,rgb(156, 81, 196) 70%);
+
+.s3:hover {
+    background: linear-gradient(to top, rgb(202, 74, 253) 30%, rgb(156, 81, 196) 70%);
 }
-.s4:hover{
-    background: linear-gradient(to top,rgb(184, 153, 0) 30%,rgb(69, 56, 14) 70%);
+
+.s4:hover {
+    background: linear-gradient(to top, rgb(184, 153, 0) 30%, rgb(69, 56, 14) 70%);
 }
-.s5:hover{
-    background: linear-gradient(to top,rgb(177, 0, 0) 30%,rgb(0, 32, 146) 70%);
+
+.s5:hover {
+    background: linear-gradient(to top, rgb(177, 0, 0) 30%, rgb(0, 32, 146) 70%);
 }
-.s7:hover{
-    background: linear-gradient(to top,rgb(13, 13, 13) 30%,rgb(134, 0, 146) 70%);
+
+.s7:hover {
+    background: linear-gradient(to top, rgb(13, 13, 13) 30%, rgb(134, 0, 146) 70%);
 }
-.s8:hover{
-    background: linear-gradient(to top,rgb(41, 41, 41) 30%,rgb(80, 66, 26) 70%);
+
+.s8:hover {
+    background: linear-gradient(to top, rgb(41, 41, 41) 30%, rgb(80, 66, 26) 70%);
 }
-.s9:hover{
-    background: linear-gradient(to top,rgb(221, 0, 77) 30%,rgb(229, 194, 0) 70%);
+
+.s9:hover {
+    background: linear-gradient(to top, rgb(221, 0, 77) 30%, rgb(229, 194, 0) 70%);
 }
-.s10:hover{
-    background: linear-gradient(to top,rgb(0, 0, 0) 30%,rgb(7, 187, 232) 70%);
+
+.s10:hover {
+    background: linear-gradient(to top, rgb(0, 0, 0) 30%, rgb(7, 187, 232) 70%);
 }
-.s11:hover{
-    background: linear-gradient(to top,rgb(188, 152, 12) 30%,rgb(201, 242, 255) 70%);
+
+.s11:hover {
+    background: linear-gradient(to top, rgb(188, 152, 12) 30%, rgb(201, 242, 255) 70%);
 }
-.s12:hover{
-    background: linear-gradient(to bottom,rgb(93, 44, 2) 30%,rgb(0, 0, 0) 70%);
+
+.s12:hover {
+    background: linear-gradient(to bottom, rgb(93, 44, 2) 30%, rgb(0, 0, 0) 70%);
 }
-.s13:hover{
-    background: linear-gradient(to top,rgb(126, 126, 126) 30%,rgb(222, 222, 222) 70%);
+
+.s13:hover {
+    background: linear-gradient(to top, rgb(126, 126, 126) 30%, rgb(222, 222, 222) 70%);
 }
-.s14:hover{
-    background: linear-gradient(to top,rgb(0, 0, 0) 30%,rgb(255, 247, 212) 70%);
+
+.s14:hover {
+    background: linear-gradient(to top, rgb(0, 0, 0) 30%, rgb(255, 247, 212) 70%);
 }
-.s15:hover{
-    background: linear-gradient(to top,rgb(126, 119, 0) 30%,rgb(0, 166, 255) 70%);
+
+.s15:hover {
+    background: linear-gradient(to top, rgb(126, 119, 0) 30%, rgb(0, 166, 255) 70%);
+}
+
+.s1 button {
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #00c2c7, #1abc9c);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 97px;
+    left: 72%;
+    visibility: hidden;
+    /* animation: rollup 1s ease-in-out 1s 1; */
+}
+
+@keyframes rollup {
+    from {
+        transform: translateY(7px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+.scroll-l button{
+    background-color: #00000088;
+    border: none;
+    width: 30px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    z-index: 1000;
+}
+.scroll-r button{
+    background-color: #00000088;
+    border: none;
+    width: 30px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    z-index: 1000;
 }
