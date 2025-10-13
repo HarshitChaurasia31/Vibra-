@@ -16,6 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    overflow-y: hidden;
     /* Ensure the nav appears above the background */
     position: relative;
     z-index: 0;
@@ -141,9 +142,11 @@ nav {
     height: 47px;
     color: black;
 }
-.login button:hover{
+
+.login button:hover {
     cursor: pointer;
 }
+
 .install img {
     width: 20px;
     height: 20px;
@@ -183,17 +186,6 @@ main {
     position: relative;
     /* overflow-y: auto;
     scrollbar-width: none; */
-}
-
-.songs {
-    border-radius: 10px;
-    background-color: transparent;
-    backdrop-filter: blur(3px);
-    background-image: linear-gradient(120deg, rgba(204, 0, 255, 0.304), rgba(3, 1, 4, 0.233));
-    /* overflow-y: scroll; */
-    overflow: hidden;
-    /* prevent grid from expanding */
-    position: relative;
 }
 
 .head {
@@ -289,6 +281,20 @@ main {
     padding: 10px;
 }
 
+.songs {
+    border-radius: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    background-image: linear-gradient(120deg, rgba(204, 0, 255, 0.304), rgba(3, 1, 4, 0.233));
+    /* overflow-y: scroll; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 85vh;
+    scrollbar-width: thin;
+    /* prevent grid from expanding */
+    position: relative;
+}
+
 .header1 {
     display: flex;
     align-items: center;
@@ -310,7 +316,7 @@ main {
     overflow-y: hidden;
     scroll-behavior: smooth;
     gap: 15px;
-    padding: 15px 45px;
+    padding: 0px 45px;
     box-sizing: border-box;
     scrollbar-width: none;
 }
@@ -416,7 +422,7 @@ main {
     background: linear-gradient(to top, rgb(126, 119, 0) 30%, rgb(0, 166, 255) 70%);
 }
 
-.s1 button {
+.play {
     padding: 10px;
     border-radius: 50%;
     background: linear-gradient(145deg, #00c2c7, #1abc9c);
@@ -446,7 +452,8 @@ main {
         opacity: 100%;
     }
 }
-.scroll-l button{
+
+.scroll-l button {
     background-color: #00000088;
     border: none;
     width: 30px;
@@ -462,7 +469,8 @@ main {
     left: 10px;
     z-index: 1000;
 }
-.scroll-r button{
+
+.scroll-r button {
     background-color: #00000088;
     border: none;
     width: 30px;
@@ -477,4 +485,87 @@ main {
     top: 40%;
     right: 10px;
     z-index: 1000;
+}
+
+.ahead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 3rem;
+}
+
+.acontent {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 6px 45px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.a1 {
+    position: relative;
+}
+
+.a1 img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 black;
+    object-fit: cover;
+}
+
+.a1 h4 {
+    padding-top: 5px;
+    font-weight: 350;
+}
+
+.a1 p {
+    padding-top: 4px;
+    color: rgb(173, 173, 173);
+}
+
+.aplay {
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #00c2c7, #1abc9c);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 62px;
+    left: 73%;
+    visibility: hidden;
+}
+.scrl1 button,
+.scrr1 button {
+    background-color: #00000088;
+    border: none;
+    width: 30px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+.scrl1 button {
+    left: 10px;
+}
+.scrr1 button {
+    right: 10px;
 }

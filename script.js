@@ -1,4 +1,4 @@
-const boxes = document.querySelectorAll(".s1");
+const boxes = document.querySelectorAll(".p1");
 boxes.forEach(box => {
     const p = box.querySelector(".play");
     box.addEventListener("mouseover", () => {
@@ -11,32 +11,30 @@ boxes.forEach(box => {
         // p.style.animationIterationCount= "0";
     })
 })
-const scrollContainer = document.querySelector(".tsongs");
-const btnRight = document.querySelector(".scroll-r button");
-const btnLeft = document.querySelector(".scroll-l button");
-function updatebutton(){
-    const maxscroll=scrollContainer.scrollWidth-scrollContainer.clientWidth;
-    btnLeft.disabled = scrollContainer.scrollLeft <= 0;
-    btnRight.disabled = scrollContainer.scrollLeft >= maxscroll;
-    if(scrollContainer.scrollLeft <= 0){
-        btnLeft.style.visibility="hidden";
-    }
-    else {
-        btnLeft.style.visibility="visible";
-    }
-    if(scrollContainer.scrollLeft >=maxscroll){
-        btnRight.style.visibility="hidden";
-    }
-    else {
-        btnRight.style.visibility="visible";
-    }
-}
-updatebutton();
-const scrollAmount = 700;
-btnRight.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+const scrollSections = document.querySelectorAll(".scroll");
+
+scrollSections.forEach((scrollContainer, index) => {
+    const btnRight = scrollContainer.parentElement.querySelector(".scrr button");
+    const btnLeft = scrollContainer.parentElement.querySelector(".scrl button");
+
+    const updateButtons = () => {
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        btnLeft.disabled = scrollContainer.scrollLeft <= 0;
+        btnRight.disabled = scrollContainer.scrollLeft >= maxScroll;
+
+        btnLeft.style.visibility = scrollContainer.scrollLeft <= 0 ? "hidden" : "visible";
+        btnRight.style.visibility = scrollContainer.scrollLeft >= maxScroll ? "hidden" : "visible";
+    };
+
+    updateButtons();
+    const scrollAmount = scrollContainer.clientWidth*0.6;
+
+    btnRight.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+    btnLeft.addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    scrollContainer.addEventListener("scroll", updateButtons);
 });
-btnLeft.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-});
-scrollContainer.addEventListener("scroll", updatebutton);
