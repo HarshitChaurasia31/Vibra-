@@ -569,3 +569,93 @@ main {
 .scrr1 button {
     right: 10px;
 }
+.albhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 3rem;
+}
+.albcontent{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 6px 45px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+.alb1{
+    flex: 0 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+    width: 175px;
+    background-color: #896f557b;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.alb1 img{
+    height: 170px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.alb p,h4{
+    display: -webkit-box;
+    /* Use flex-like box */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    /* Vertical flow */
+    overflow: hidden;
+    /* Hide extra */
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    padding-left: 3px;
+    font-weight: 500;
+}
+.alb1 h4{
+    padding-top: 5px;
+    font-weight: 350;
+}
+.alb1 p{
+    padding-top: 4px;
+    color: rgb(173, 173, 173);
+    display: -webkit-box;
+    /* Use flex-like box */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    /* Vertical flow */
+    overflow: hidden;
+    /* Hide extra */
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 12px;
+}
+.scrl2 button{
+    top:140%;
+}
+.scrr2 button{
+    top:140%;
+}
+.a1:hover{
+    background-color: rgba(197, 197, 197, 0.397);
+    backdrop-filter: blur(10px);
+    /* padding: 10px; */
+    border-radius: 7px;
+}
+.albplay{
+    left: 73%;
+    bottom: 112px;
+}
+.rheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 3rem;
+}
