@@ -765,7 +765,7 @@ main {
     top:250%;
 }
 .rplay{
-    bottom: 37px;
+    bottom: 45px;
     left: 75%;
 }
 .tplay{
@@ -776,7 +776,8 @@ main {
     margin-bottom: 100px;
 }
 .sep1 {
-    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    border: 1px solid #0000004d;
 }
 .l1{
     display: flex;
